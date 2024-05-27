@@ -118,9 +118,10 @@ export const AppointmentCalendar = styled.div`
     .react-calendar__month-view__days__day {
         height: 30.33px;
         margin-top: 15px;
+        cursor: pointer;
     }
 
-    .react-calendar__tile--now {
+    .react-calendar__tile--active {
         background: var(--colors-primary);
         border-radius: 99px;
         color: white;
@@ -243,6 +244,7 @@ export const AppointmentFooter = styled.div`
         font-weight: 600;
         line-height: 21px;
         margin-right: 30px;
+        cursor: pointer;
 
         .chevron-right {
             color: var(--colors-primary);
@@ -251,5 +253,9 @@ export const AppointmentFooter = styled.div`
             font-weight: 400;
             margin-top: -3px;
         }
+    }
+
+    button:disabled {
+        cursor: not-allowed;
     }
 `;

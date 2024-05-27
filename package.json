@@ -20,6 +20,8 @@
   "author": "Amit Kumar",
   "license": "ISC",
   "dependencies": {
+    "@tanstack/react-query": "^5.39.0",
+    "axios": "^1.7.2",
     "next": "^13.4.7",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
