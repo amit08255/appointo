@@ -19,11 +19,11 @@ function AppointmentFormVariants({ selectedDate, slots }:Props) {
 
     return (
         <AppointmentVariation>
-            <div>
+            <div style={{ display: slotList.length > 0 ? 'block' : 'none' }}>
                 <h1 className="title">Select From Variants</h1>
                 <Select value={variant} onChange={onVariantSelect} className="variants-select" classNamePrefix="variants-select" options={getVariants()} />
             </div>
-            <div className="divider" />
+            <div style={{ display: slotList.length > 0 ? 'block' : 'none' }} className="divider" />
             <div>
                 <h1 className="title">{`${getFormattedDate(selectedDate)} - Available Slots`}</h1>
                 <div className="scrollable-durations">
@@ -44,6 +44,9 @@ function AppointmentFormVariants({ selectedDate, slots }:Props) {
                             </div>
                         ))
                     }
+                </div>
+                <div style={{ display: slotList.length < 1 ? 'block' : 'none' }} className="empty-placeholder">
+                    Uh-Oh. All time slots have been filled for the day. Please choose another date
                 </div>
             </div>
         </AppointmentVariation>

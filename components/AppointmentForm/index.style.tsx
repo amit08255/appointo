@@ -204,6 +204,11 @@ export const AppointmentVariation = styled.div`
             display: none;
         }
     }
+
+    .empty-placeholder {
+        color: #4d5055;
+        font-size: 14px;
+    }
 `;
 
 export const AppointmentFooter = styled.div`
