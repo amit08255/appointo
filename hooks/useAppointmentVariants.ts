@@ -81,6 +81,10 @@ const useAppointmentVariants = (slots:AppointmentSlotInfo[], selectedDate:Date) 
 
     React.useEffect(() => {
         setSlotList(slots);
+    }, [slots]);
+
+    React.useEffect(() => {
+        setSlotList(slots);
         setVariant(null);
         onSlotSelect(null);
     }, [selectedDate.toDateString()]);

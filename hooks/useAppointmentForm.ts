@@ -48,10 +48,10 @@ const useAppointmentForm = () => {
 
     React.useEffect(() => {
         if (!isLoading) {
-            const currentDate = convertDateToString(new Date());
+            const currentDate = convertDateToString(selectedDate);
             setSlotList(appointments[currentDate] || []);
         }
-    }, [isLoading]);
+    }, [isLoading, appointments]);
 
     const onSelectDate = (date) => {
         const pickedDateStr = convertDateToString(date);

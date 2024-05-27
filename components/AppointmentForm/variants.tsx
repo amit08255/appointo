@@ -4,8 +4,8 @@ import * as React from 'react';
 import Select from 'react-select';
 import useAppointmentVariants from 'hooks/useAppointmentVariants';
 import CheckIcon from 'components/Icons/check';
-import { AppointmentVariation } from './index.style';
 import Loading from 'components/Loading';
+import { AppointmentVariation } from './index.style';
 
 type Props = {
     selectedDate: Date,

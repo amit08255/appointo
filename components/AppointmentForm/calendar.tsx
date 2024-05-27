@@ -21,7 +21,7 @@ function AppointmentFormCalendar({ selectedDate, onSelectDate }:Props) {
                 next2Label={null}
                 value={selectedDate}
                 defaultValue={selectedDate}
-                onClickDay={(value, event) => onSelectDate(value)}
+                onClickDay={(value) => onSelectDate(value)}
                 tileDisabled={({ date }) => {
                     const currentDate = new Date().getDate();
                     const selectedDateVal = date.getDate();
