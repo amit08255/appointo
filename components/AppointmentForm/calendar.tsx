@@ -22,7 +22,20 @@ function AppointmentFormCalendar({ selectedDate, onSelectDate }:Props) {
                 value={selectedDate}
                 defaultValue={selectedDate}
                 onClickDay={(value, event) => onSelectDate(value)}
-                tileDisabled={({ date }) => date.getTime() < Date.now()}
+                tileDisabled={({ date }) => {
+                    const currentDate = new Date().getDate();
+                    const selectedDateVal = date.getDate();
+
+                    const currentMonth = new Date().getMonth();
+                    const selectedMonth = date.getMonth();
+
+                    const currentYear = new Date().getFullYear();
+                    const selectedYear = date.getFullYear();
+
+                    return ((selectedDateVal < currentDate && selectedMonth <= currentMonth
+                    && selectedYear <= currentYear) || (selectedMonth < currentMonth
+                    && selectedYear <= currentYear));
+                }}
             />
         </AppointmentCalendar>
     );

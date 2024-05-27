@@ -7,9 +7,6 @@ function Navbar() {
         <NavbarWrapper>
             <NavLogo src="/logo-img.png" />
             <NavLinks>
-                <ul>
-                    <li>Menu</li>
-                </ul>
                 <a href="/">Contact us</a>
                 <a href="/" className="external-btn">
                     <ExternalLinkIcon />

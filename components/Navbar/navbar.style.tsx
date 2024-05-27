@@ -28,10 +28,6 @@ export const NavLinks = styled.div`
         color: rgba(9, 15, 78, 1);
     }
 
-    ul {
-        list-style: none;
-    }
-
     a {
         text-decoration: none;
     }

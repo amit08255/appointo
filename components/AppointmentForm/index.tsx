@@ -7,14 +7,18 @@ import AppointmentFormFooter from './footer';
 
 function AppointmentForm() {
     const {
-        slotList, selectedDate, onSelectDate, selectedSlot,
+        slotList, selectedDate, onSelectDate, selectedSlot, isLoading,
     } = useAppointmentForm();
 
     return (
         <AppointmentFormWrapper>
             <AppointmentCard>
                 <AppointmentFormCalendar selectedDate={selectedDate} onSelectDate={onSelectDate} />
-                <AppointmentFormVariants selectedDate={selectedDate} slots={slotList} />
+                <AppointmentFormVariants
+                    isLoading={isLoading}
+                    selectedDate={selectedDate}
+                    slots={slotList}
+                />
             </AppointmentCard>
             <AppointmentFormFooter selectedSlot={selectedSlot} />
         </AppointmentFormWrapper>

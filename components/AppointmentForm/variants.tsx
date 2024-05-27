@@ -5,13 +5,15 @@ import Select from 'react-select';
 import useAppointmentVariants from 'hooks/useAppointmentVariants';
 import CheckIcon from 'components/Icons/check';
 import { AppointmentVariation } from './index.style';
+import Loading from 'components/Loading';
 
 type Props = {
     selectedDate: Date,
     slots: AppointmentSlotInfo[],
+    isLoading: boolean,
 };
 
-function AppointmentFormVariants({ selectedDate, slots }:Props) {
+function AppointmentFormVariants({ selectedDate, slots, isLoading }:Props) {
     const {
         getFormattedDate, getVariants, slotList, onVariantSelect, variant,
         selectedSlot, onSlotSelect,
@@ -28,7 +30,7 @@ function AppointmentFormVariants({ selectedDate, slots }:Props) {
                 <h1 className="title">{`${getFormattedDate(selectedDate)} - Available Slots`}</h1>
                 <div className="scrollable-durations">
                     {
-                        slotList.map((slot) => (
+                        !isLoading && slotList.map((slot) => (
                             <div
                                 key={slot.formattedDuration}
                                 className={`variant-checkbox ${selectedSlot?.formattedDuration === slot.formattedDuration ? 'checked' : ''}`}
@@ -45,9 +47,16 @@ function AppointmentFormVariants({ selectedDate, slots }:Props) {
                         ))
                     }
                 </div>
-                <div style={{ display: slotList.length < 1 ? 'block' : 'none' }} className="empty-placeholder">
+                <div style={{ display: !isLoading && slotList.length < 1 ? 'block' : 'none' }} className="empty-placeholder">
                     Uh-Oh. All time slots have been filled for the day. Please choose another date
                 </div>
+                {
+                    isLoading ? (
+                        <div className="loader">
+                            <Loading />
+                        </div>
+                    ) : null
+                }
             </div>
         </AppointmentVariation>
     );

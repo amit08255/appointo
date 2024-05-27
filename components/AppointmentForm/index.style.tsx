@@ -10,6 +10,12 @@ export const AppointmentFormWrapper = styled.div`
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
+
+    @media (max-width: 992px) {
+        height: auto;
+        margin-top: 110px;
+        margin-bottom: 30px;
+    }
 `;
 
 export const AppointmentCard = styled.div`
@@ -18,7 +24,12 @@ export const AppointmentCard = styled.div`
     height: 494px;
     display: flex;
     border-radius: 12px;
-    background-color: red;
+
+    @media (max-width: 992px) {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
 `;
 
 export const AppointmentCalendar = styled.div`
@@ -27,6 +38,10 @@ export const AppointmentCalendar = styled.div`
     background-color: rgba(235, 235, 240, 1);
     border-top-left-radius: 12px;
     padding: 40px;
+
+    @media (max-width: 992px) {
+        max-width: 80%;
+    }
 
     .title {
         margin: 0;
@@ -138,6 +153,10 @@ export const AppointmentVariation = styled.div`
     display: flex;
     flex-direction: column;
 
+    @media (max-width: 992px) {
+        max-width: 80%;
+    }
+
     .title {
         margin: 0;
         padding: 0;
@@ -209,6 +228,15 @@ export const AppointmentVariation = styled.div`
         color: #4d5055;
         font-size: 14px;
     }
+
+    .loader {
+        padding-top: 60px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 `;
 
 export const AppointmentFooter = styled.div`
@@ -223,6 +251,10 @@ export const AppointmentFooter = styled.div`
     align-items: center;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
+
+    @media (max-width: 992px) {
+        max-width: 91%;
+    }
 
     .product-info {
         padding-left: 30px;
