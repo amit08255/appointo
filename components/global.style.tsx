@@ -16,18 +16,12 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        background-color: white;
+        background: url(/background.png);
         margin: 0;
         padding: 0;
-    }
-
-    .background-pattern {
-        position: fixed;
-        z-index: -1;
-        top: 0px;
-        bottom: 0px;
-        left: 0px;
-        right: 0px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
     }
 
     @keyframes spin {

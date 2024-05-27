@@ -131,7 +131,7 @@ export const AppointmentCalendar = styled.div`
     }
 
     .react-calendar__month-view__days__day {
-        height: 30.33px;
+        height: 20.33px;
         margin-top: 15px;
         cursor: pointer;
     }

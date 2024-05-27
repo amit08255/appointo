@@ -7,7 +7,7 @@ type Props = {
 
 function AppointmentFormFooter({ selectedSlot }:Props) {
     return (
-        <AppointmentFooter>
+        <AppointmentFooter data-testid="footer">
             <div className="product-info">
                 Powered By
                 <span style={{ marginLeft: '2px' }}>

@@ -9,7 +9,7 @@ type Props = {
 
 function AppointmentFormCalendar({ selectedDate, onSelectDate }:Props) {
     return (
-        <AppointmentCalendar>
+        <AppointmentCalendar data-testid="calendar">
             <h1 className="title">Test Service</h1>
             <div className="timezone">
                 <div className="timezone-title">Timezone:</div>

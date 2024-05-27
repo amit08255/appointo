@@ -20,7 +20,7 @@ function AppointmentFormVariants({ selectedDate, slots, isLoading }:Props) {
     } = useAppointmentVariants(slots, selectedDate);
 
     return (
-        <AppointmentVariation>
+        <AppointmentVariation data-testid="variants">
             <div style={{ display: slotList.length > 0 ? 'block' : 'none' }}>
                 <h1 className="title">Select From Variants</h1>
                 <Select value={variant} onChange={onVariantSelect} className="variants-select" classNamePrefix="variants-select" options={getVariants()} />
